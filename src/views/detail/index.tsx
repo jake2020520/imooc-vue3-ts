@@ -30,7 +30,7 @@ export default defineComponent({
               <div class="username">{itemData.value?.user?.username}</div>
               <div class="">扫一扫，手机预览</div>
               <div class="buttons">
-                <router-link to="/edit" class="left">
+                <router-link to="/editor" class="left">
                   <el-button type="primary">使用模板</el-button>
                 </router-link>
                 <el-button type="primary">下载图片海报</el-button>

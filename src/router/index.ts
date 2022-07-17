@@ -8,9 +8,9 @@ const routes = [
     meta: { isHiddenHeader: false, isHiddenFooter: false }
   },
   {
-    path: '/edit',
-    name: 'edit',
-    component: () => import('../views/edit/index'),
+    path: '/editor',
+    name: 'editor',
+    component: () => import('../views/editor/index'),
     meta: { isHiddenHeader: false, isHiddenFooter: true }
   },
   {
