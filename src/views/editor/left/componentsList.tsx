@@ -22,10 +22,6 @@ export default defineComponent({
     },
     onItemClick: { type: Function }
   },
-  emits: ['on-item-click'],
-  // components: {
-  //   LText: defineAsyncComponent(() => import('@/components/lText'))
-  // },
   setup(props) {
     // const store = useStore();
     const onItemClick = (data: any) => {

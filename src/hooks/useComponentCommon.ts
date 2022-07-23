@@ -1,7 +1,10 @@
 import { computed } from 'vue';
 import { pick } from 'lodash-es';
-const useComponentCommon = <T extends { [key: string]: any }>(props: T, picks: string[]) => {
+import { TextComponentProps } from '@/store/editor/types';
+
+const useComponentCommon = <T extends Partial<TextComponentProps>>(props: T, picks: string[]) => {
   const styleProps = computed(() => pick(props, picks));
+
   const handleClick = () => {
     console.log('handleClick');
     if (props.actionType === 'url' && props.url) {

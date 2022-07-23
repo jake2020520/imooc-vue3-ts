@@ -54,14 +54,14 @@ module.exports = function (mode) {
           use: [
             {
               loader: 'babel-loader'
-            },
-            {
-              loader: 'eslint-loader',
-              options: {
-                // 这里的配置项参数将会被传递到 eslint 的 CLIEngine
-                formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
-              }
             }
+            // {
+            //   loader: 'eslint-loader',
+            //   options: {
+            //     // 这里的配置项参数将会被传递到 eslint 的 CLIEngine
+            //     formatter: require('eslint-friendly-formatter') // 指定错误报告的格式规范
+            //   }
+            // }
           ]
         },
         // 打包图片等

@@ -5,6 +5,7 @@ import {
 } from 'vue';
 import { useStore } from 'vuex';
 import TemplateList from '@/components/templateList';
+
 // import { TemplateProps } from '@/store/common/types';
 import './style.less';
 

@@ -17,17 +17,26 @@ const module: Module<State, RootState> = {
       {
         id: uuidV4(),
         name: 'LText',
-        props: { text: 'hello', fontSize: '10px', color: 'red' }
+        props: { text: 'hello', fontSize: '10px', color: 'red', lineHeight: '1' }
       },
       {
         id: uuidV4(),
         name: 'LText',
-        props: { text: 'hello22', fontSize: '20px', color: 'green' }
+        props: { text: 'hello22', fontSize: '20px', color: 'green', lineHeight: '2' }
       },
       {
         id: uuidV4(),
         name: 'LText',
-        props: { text: 'hello33', fontSize: '30px', actionType: 'url', url: 'www.google.com', cursor: 'pointer' }
+        props: {
+          text: 'hello33',
+          fontSize: '30px',
+          actionType: 'url',
+          url: '',
+          cursor: 'pointer',
+          lineHeight: '2',
+          textAlign: 'left',
+          fontFamily: '"SimSun","STSong"'
+        }
       }
     ],
     currentElement: ''

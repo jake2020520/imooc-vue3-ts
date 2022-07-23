@@ -1,9 +1,9 @@
 import { defineComponent, h, resolveComponent } from 'vue';
 // import { pick } from 'lodash-es';
-import { transformToComponentProps, textDefaultProps, textStylePropNames } from '../defaultProps';
+import { transformToComponentProps, textComponentProps, textStylePropNames } from '../defaultProps';
 import useComponentCommon from '../../hooks/useComponentCommon';
 
-const defaultProps = transformToComponentProps(textDefaultProps);
+const defaultProps = transformToComponentProps(textComponentProps);
 
 export default defineComponent({
   name: 'LText',
@@ -23,7 +23,7 @@ export default defineComponent({
       return (
         <>
           {h(
-            resolveComponent('div'),
+            resolveComponent(props.tag),
             { style: { ...styleProps.value }, onClick: handleClick, class: 'l-text-component' },
             `${props.text}`
           )}
