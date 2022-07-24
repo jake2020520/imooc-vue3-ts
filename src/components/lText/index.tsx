@@ -25,7 +25,7 @@ export default defineComponent({
           {h(
             resolveComponent(props.tag),
             { style: { ...styleProps.value }, onClick: handleClick, class: 'l-text-component' },
-            `${props.text}`
+            { default: () => props.text } as any
           )}
         </>
       );

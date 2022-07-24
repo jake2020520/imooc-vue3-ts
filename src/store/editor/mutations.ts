@@ -17,3 +17,10 @@ export function addComponents(state: State, payload: Partial<TextComponentProps>
 export function setActive(state: State, payload: string) {
   state.currentElement = payload;
 }
+
+export function updateComponent(state: State, payload: any) {
+  const updateComponent = state.components.find(item => item.id == state.currentElement);
+  if (updateComponent) {
+    updateComponent.props[payload.key as keyof TextComponentProps] = payload.value;
+  }
+}

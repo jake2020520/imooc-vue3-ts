@@ -27,6 +27,11 @@ const module: Module<State, RootState> = {
       {
         id: uuidV4(),
         name: 'LText',
+        props: { text: 'hello22-font', fontSize: '10px', lineHeight: '1' }
+      },
+      {
+        id: uuidV4(),
+        name: 'LText',
         props: {
           text: 'hello33',
           fontSize: '30px',
@@ -35,7 +40,7 @@ const module: Module<State, RootState> = {
           cursor: 'pointer',
           lineHeight: '2',
           textAlign: 'left',
-          fontFamily: '"SimSun","STSong"'
+          fontFamily: '"KaiTi","STKaiti"'
         }
       }
     ],

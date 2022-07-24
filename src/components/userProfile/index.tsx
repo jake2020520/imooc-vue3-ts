@@ -13,7 +13,7 @@ import { ElMessage } from 'element-plus';
 // }
 
 export default defineComponent({
-  name: 'App-tsx',
+  name: 'user-profile',
   setup() {
     // const state = reactive({ name: 'jake_1' });
     // const data: Config = { name: 'aa' };

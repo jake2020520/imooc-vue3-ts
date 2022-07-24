@@ -5,7 +5,7 @@ export const commonDefaultProps: CommonDefaultProps = {
   actionType: '',
   url: '',
   height: '',
-  width: '318px',
+  width: '',
   paddingLeft: '0px',
   paddingRight: '0px',
   paddingTop: '0px',

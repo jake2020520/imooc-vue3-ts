@@ -1,3 +1,4 @@
+import { VNode } from 'vue';
 export interface State {
   // 中间编辑器渲染的数组
   components: ComponentItem[];
@@ -54,13 +55,16 @@ export interface TextComponentProps extends CommonDefaultProps {
 export interface PropToForm {
   component: string;
   subComponent?: string;
-  value?: string;
   extraProps?: { [key: string]: any };
   text?: string;
-  options?: { text: string; value: any }[];
+  value?: string;
+  options?: { text: string | VNode; value: any }[];
   // eslint-disable-next-line no-unused-vars
   initTransform?: (v: any) => any;
+  // eslint-disable-next-line no-unused-vars
+  afterTransform?: (v: any) => any;
   valueProp?: string;
+  eventName?: string;
 }
 
 export type PropsToForms = {

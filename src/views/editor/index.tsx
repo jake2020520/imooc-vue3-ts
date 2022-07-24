@@ -18,7 +18,7 @@ import './style.less';
 // }
 
 export default defineComponent({
-  name: 'home',
+  name: 'editor',
   components: {
     LText: defineAsyncComponent(() => import('@/components/lText'))
   },
@@ -33,6 +33,10 @@ export default defineComponent({
     };
     const setActive = (id: string) => {
       store.commit('editor/setActive', id);
+    };
+    const handleChange = (key: string, value: string) => {
+      console.log('-handleChang-', key, value);
+      store.commit('editor/updateComponent', { key, value });
     };
 
     return () => {
@@ -60,7 +64,10 @@ export default defineComponent({
                 </el-main>
               </el-container>
               <el-aside class="aside-right">
-                <PropsTable props={currentElement.value?.props as TextComponentProps}></PropsTable>
+                <PropsTable
+                  props={currentElement.value?.props as TextComponentProps}
+                  handleChangeProps={handleChange}
+                ></PropsTable>
               </el-aside>
             </el-container>
           </el-container>
