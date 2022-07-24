@@ -76,7 +76,6 @@ export default defineComponent({
     const getFinalRender = () => {
       const domArr: any[] = [];
       const data = finalProps.value;
-
       for (let key in data) {
         const newkey = key as keyof TextComponentProps;
         const item = finalProps.value[newkey] as FormProps;
@@ -92,6 +91,7 @@ export default defineComponent({
                   modelValue: reaData[newkey],
                   [`on${item.eventName}`]: (e: any) => {
                     item.events[item.eventName as string](e);
+                    // 添加 响应式数据,不然，这个方法不能响应
                     reaData[newkey] = e;
                     // console.log('-render-props.uuid-', item.eventName, newkey, reaData);
                   }
