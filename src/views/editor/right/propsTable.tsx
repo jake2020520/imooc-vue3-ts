@@ -55,7 +55,7 @@ export default defineComponent({
             eventName,
             events: {
               [eventName]: (e: any) => {
-                console.log('发射事件:----', newkey, e);
+                console.log('发射事件:---', newkey, e);
                 const value = afterTransform ? afterTransform(e) : e;
                 props.handleChangeProps(newkey, value);
               }
