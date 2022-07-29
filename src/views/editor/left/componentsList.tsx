@@ -1,7 +1,8 @@
 import {
-  defineComponent
+  defineComponent,
+  h
   //   computed,
-  //   h,
+
   //   resolveComponent,
   //   defineAsyncComponent
   // reactive

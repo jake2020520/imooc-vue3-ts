@@ -12,7 +12,7 @@ function createAxiosInstance() {
         'Content-Type': 'application/json'
       }
     }
-  });
+  } as any);
   // 添加请求拦截器(在发送请求之前做些什么)
   instance.interceptors.request.use(config => {
     //   //可添加开启loading效果的函数

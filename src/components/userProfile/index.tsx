@@ -1,9 +1,10 @@
 import {
   defineComponent,
-  computed
+  computed,
+  h
   // reactive
 } from 'vue';
-// import { useRoute } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { useStore } from 'vuex';
 import { UserProps } from '@/store/common/types';
 import { ElMessage } from 'element-plus';
@@ -19,18 +20,26 @@ export default defineComponent({
     // const data: Config = { name: 'aa' };
     const store = useStore();
     const user = computed<UserProps>(() => store.state.common.user);
-    // const route = useRoute();
+    const router = useRouter();
+
+    const handleLogin = (command: string | number | object) => {
+      console.log('--', command);
+      store.commit('common/setLogin');
+      router.push('/');
+
+      ElMessage(`click on item ${command}`);
+    };
     const handleCommand = (command: string | number | object) => {
       console.log('--', command);
       store.commit('common/setLogout');
-
+      router.push('/login');
       ElMessage(`click on item ${command}`);
     };
     return () => {
       return (
         <div class="user-login">
           {!user.value.isLogin ? (
-            <el-button>登录</el-button>
+            <el-button onclick={handleLogin}>登录</el-button>
           ) : (
             <el-dropdown
               trigger="click"

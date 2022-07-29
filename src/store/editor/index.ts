@@ -37,6 +37,7 @@ const module: Module<State, RootState> = {
           fontSize: '30px',
           actionType: 'url',
           url: '',
+          color: 'red',
           cursor: 'pointer',
           lineHeight: '2',
           textAlign: 'left',

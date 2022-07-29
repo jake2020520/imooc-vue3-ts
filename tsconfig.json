@@ -10,7 +10,9 @@
       "dom",
       "es2017"
     ],  
-    "jsx": "preserve",                                 /* Specify library files to be included in the compilation. */
+    "jsx": "react", // react preserve
+    "jsxFactory": "h",  
+    "jsxFragmentFactory": "Fragment",                              /* Specify library files to be included in the compilation. */
     // "allowJs": true,                             /* Allow javascript files to be compiled. */
     "sourceMap": true,                           /* Generates corresponding '.map' file. */
     // "outFile": "./",                             /* Concatenate and emit output to single file. */
@@ -24,13 +26,13 @@
     "forceConsistentCasingInFileNames": true,       /* Disallow inconsistently-cased references to the same file. */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
      },
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue", "src/vue.d.ts111", "src/index.js",
+    "src/**/*.vue", "src/vue.d.ts111", "src/index.js", "tests/index.spec.tsx",
   ],
   "exclude": [
     "node_modules",
