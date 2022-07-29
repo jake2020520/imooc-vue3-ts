@@ -56,5 +56,10 @@ export const mapPropsToForms: PropsToForms = {
     text: '字体',
     eventName: 'Change',
     options: [{ value: '', text: '无' }, ...fontFamilyOptions]
+  },
+  color: {
+    component: 'ColorPicker',
+    text: '字体颜色',
+    eventName: 'Change'
   }
 };

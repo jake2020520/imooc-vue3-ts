@@ -29,7 +29,7 @@ const module: Module<State, RootState> = {
         _id: '617d33bed38dbc5025755a8b'
       }
     ],
-    user: { isLogin: true, userName: 'viking' }
+    user: { isLogin: false, userName: 'viking' }
   },
   actions,
   getters,

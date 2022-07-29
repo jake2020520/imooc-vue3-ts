@@ -20,4 +20,4 @@ export default createStore<RootState>({
   modules
 });
 
-export { modules };
+export { modules, createStore };

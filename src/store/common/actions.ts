@@ -8,7 +8,8 @@ import { common } from '@/service';
  * @param store
  */
 export async function getTodoData(store: ActionContext<State, RootState>) {
-  const data = await common.getTodoApi();
+  // const data = await common.getTodoApi();
+  const data = {};
   store.commit('setWeather', data);
   return data;
 }

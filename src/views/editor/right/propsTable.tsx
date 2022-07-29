@@ -10,6 +10,7 @@ import {
   // reactive
 } from 'vue';
 // import { useStore } from 'vuex';
+import ColorPicker from '@/components/colorPicker';
 import { TextComponentProps, PropsToForms, PropToForm } from '@/store/editor/types';
 
 import { mapPropsToForms } from './propsMap';
@@ -37,6 +38,7 @@ export default defineComponent({
     },
     handleChangeProps: { type: Function, required: true }
   },
+  components: { ColorPicker },
   setup(props) {
     let reaData: any;
 
@@ -91,6 +93,7 @@ export default defineComponent({
                   modelValue: reaData[newkey],
                   [`on${item.eventName}`]: (e: any) => {
                     item.events[item.eventName as string](e);
+                    console.log('table:e', e);
                     // 添加 响应式数据,不然，这个方法不能响应
                     reaData[newkey] = e;
                     // console.log('-render-props.uuid-', item.eventName, newkey, reaData);

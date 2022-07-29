@@ -20,6 +20,19 @@ function Title(props){
     })
 ```
 
+```
+const Button = defineComponent({
+  name: 'Button',
+  render() {
+    return (
+      <button >
+        <h1>答复</h1>
+      </button>
+    );
+  }
+});
+```
+
 4. 特殊的方法
 
 ```

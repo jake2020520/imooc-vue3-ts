@@ -1,10 +1,13 @@
 import {
   defineComponent,
-  computed
+  computed,
+  h
   // reactive
 } from 'vue';
 import { useStore } from 'vuex';
+import { ElButton } from 'element-plus';
 import TemplateList from '@/components/templateList';
+import HelloWorld from './testCase/HelloWorld';
 
 // import { TemplateProps } from '@/store/common/types';
 import './style.less';
@@ -25,6 +28,12 @@ export default defineComponent({
     return () => {
       return (
         <div class="common-layout">
+          <ElButton type="primary">按钮</ElButton>
+          <HelloWorld
+            onSend={value => {
+              console.log('value: ', value);
+            }}
+          ></HelloWorld>
           <TemplateList templates={templates.value}></TemplateList>
         </div>
       );
