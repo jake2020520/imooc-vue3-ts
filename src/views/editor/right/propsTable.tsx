@@ -13,7 +13,7 @@ import {
 import ColorPicker from '@/components/colorPicker';
 import { TextComponentProps, PropsToForms, PropToForm } from '@/store/editor/types';
 
-import { mapPropsToForms } from './propsMap';
+import { mapPropsToForms } from '../propsMap';
 
 import './style.less';
 interface FormProps {
