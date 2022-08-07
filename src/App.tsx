@@ -43,7 +43,7 @@ export default defineComponent({
             )}
             <el-main class="home-layout">
               <mook-text text="Welcome">d</mook-text>
-              <mook-color-picker modelValue="#f5222d" text="字体颜色" eventName="Change"></mook-color-picker>
+              <mook-color-picker modelValue="#f5222d" text="字体颜色1" eventName="Change"></mook-color-picker>
               <router-view></router-view>
             </el-main>
             {!route.meta.isHiddenFooter && (
