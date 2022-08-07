@@ -85,9 +85,13 @@ export default defineComponent({
           headers: { 'Content-Type': 'multipart/form-data' }
         })
         .then(resp => {
-          console.log('请求成功', resp);
           // fileStatus.value = 'success';
           readyFile.resp = resp.data;
+          const data = {
+            src: readyFile.resp.url
+          };
+          console.log('请求成功', resp, data);
+          props.success && props.success(data);
           readyFile.status = 'success';
         })
         .catch(e => {
@@ -175,6 +179,7 @@ export default defineComponent({
       }
     };
     const triggerUpload = () => {
+      console.log('----triggerUpload---', fileInput.value);
       if (fileInput.value) {
         fileInput.value.click();
       }

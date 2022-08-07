@@ -44,6 +44,7 @@ export default defineComponent({
 
     const finalProps = computed<PropsToForms>(() => {
       const finalData: PropsToForms = {} as PropsToForms;
+      console.log('--finalProps----', props.props);
       for (let key in props.props) {
         const newkey = key as keyof TextComponentProps;
         const item: PropToForm = mapPropsToForms[newkey] as PropToForm;
@@ -78,6 +79,7 @@ export default defineComponent({
     const getFinalRender = () => {
       const domArr: any[] = [];
       const data = finalProps.value;
+      console.log('--getFinalRender----', data);
       for (let key in data) {
         const newkey = key as keyof TextComponentProps;
         const item = finalProps.value[newkey] as FormProps;

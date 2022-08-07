@@ -20,7 +20,8 @@ import './style.less';
 export default defineComponent({
   name: 'editor',
   components: {
-    LText: defineAsyncComponent(() => import('@/components/lText'))
+    LText: defineAsyncComponent(() => import('@/components/lText')),
+    LImage: defineAsyncComponent(() => import('@/components/lImage'))
   },
   setup() {
     const store = useStore();

@@ -1,4 +1,4 @@
-import { defineComponent, PropType } from 'vue';
+import { defineComponent, PropType, h } from 'vue';
 // import { useRouter } from 'vue-router';
 import { TemplateProps } from '@/store/common/types';
 import './style.less';

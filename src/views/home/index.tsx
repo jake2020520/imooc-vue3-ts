@@ -7,7 +7,6 @@ import {
 import { useStore } from 'vuex';
 import TemplateList from '@/components/templateList';
 // import HelloWorld from './testCase/HelloWorld';
-import Uploader from '@/components/uploader';
 
 // import { TemplateProps } from '@/store/common/types';
 import './style.less';
