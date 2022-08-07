@@ -1,5 +1,5 @@
 import { mapValues, without } from 'lodash-es';
-import { CommonDefaultProps, TextComponentProps } from '@/store/editor/types';
+import { CommonDefaultProps, TextComponentProps, ImageComponentProps } from '@/store/editor/types';
 
 export const commonDefaultProps: CommonDefaultProps = {
   actionType: '',
@@ -38,11 +38,27 @@ export const textComponentProps: TextComponentProps = {
   backgroundColor: '',
   ...commonDefaultProps
 };
+
+export const imageComponentProps: ImageComponentProps = {
+  textAlign: 'left',
+  ...commonDefaultProps,
+  src: ''
+};
+
+export const isEditingProp = {
+  isEditing: {
+    type: Boolean,
+    default: false
+  }
+};
+
 // without([1,2,3,4],1,2)剔除 1,2
 // mapValues 重新赋值 key 不变 value 重新赋值
 export const textStylePropNames = without(Object.keys(textComponentProps), 'action', 'url', 'text');
+export const imageStylePropNames = without(Object.keys(imageComponentProps), 'action', 'url', 'text');
 export const transformToComponentProps = <T extends Partial<TextComponentProps>>(props: T) => {
-  return mapValues(props, (item: any) => {
+  const mapProps = mapValues(props, (item: any) => {
     return { type: item.constructor as StringConstructor, default: item };
   });
+  return { ...mapProps, ...isEditingProp };
 };

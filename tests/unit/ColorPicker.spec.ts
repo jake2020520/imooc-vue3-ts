@@ -20,7 +20,7 @@ describe('ColorPicker', () => {
   beforeAll(() => {
     wrapper = mount(ColorPicker, {
       props: {
-        value: '#ffffff'
+        modelValue: '#ffffff'
       }
     });
   });

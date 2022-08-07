@@ -8,7 +8,7 @@ export interface State {
 
 export interface ComponentItem {
   // 元素的属性
-  props: Partial<TextComponentProps>;
+  props: Partial<TextComponentProps & ImageComponentProps>;
   // id uuid v4 生成
   id: string;
   // 业务组件名称
@@ -18,8 +18,8 @@ export interface ComponentItem {
 export interface CommonDefaultProps {
   actionType: string;
   url: string;
-  height: string;
-  width: string;
+  height: string | number;
+  width: string | number;
   paddingLeft: string;
   paddingRight: string;
   paddingTop: string;
@@ -50,6 +50,10 @@ export interface TextComponentProps extends CommonDefaultProps {
   textAlign: string;
   color: string;
   backgroundColor: string;
+}
+export interface ImageComponentProps extends CommonDefaultProps {
+  textAlign: string;
+  src: string;
 }
 
 export interface PropToForm {

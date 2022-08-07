@@ -29,12 +29,12 @@ module.exports = {
     // '@vue/cli-plugin-babel/preset'
   ],
   plugins: [
-    [
-      '@babel/plugin-transform-runtime',
-      {
-        corejs: 3
-      }
-    ],
+    // [
+    //   '@babel/plugin-transform-runtime',
+    //   {
+    //     corejs: 3
+    //   }
+    // ],
     ['@vue/babel-plugin-jsx']
   ]
 };
